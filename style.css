@@ -71,6 +71,7 @@ body {
   width: 150px;
   cursor: pointer;
   padding: 10px;
+  border-radius: 5px;
 }
 /* OKNO Z WYNIKIEM */
 .result-window {

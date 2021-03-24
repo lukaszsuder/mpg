@@ -1,0 +1,124 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+}
+
+/* LAYOUT */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "grid-black"
+    "grid-yellow"
+    "counter";
+}
+
+.grid-black {
+  grid-area: grid-black;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+  font-size: 2rem;
+  color: white;
+  width: 100%;
+  height: 3rem;
+}
+
+.grid-yellow {
+  grid-area: grid-yellow;
+  background-color: yellow;
+  height: 2rem;
+}
+
+.counter {
+  grid-area: counter;
+  display: block;
+  justify-self: center;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.container-milage {
+  display: block;
+  justify-self: center;
+}
+.container-litres {
+  display: block;
+  justify-self: center;
+  padding-top: 20px;
+}
+.container-check {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+}
+/* FORM */
+
+/* INPUT */
+.milage,
+.fuel {
+  width: 200px;
+  height: auto;
+  font-size: 2rem;
+  border: solid 1px rgb(97, 97, 97);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.57);
+  margin: 10px;
+}
+/* BUTTON */
+.check {
+  width: 100px;
+  cursor: pointer;
+}
+/* OKNO Z WYNIKIEM */
+.result-window {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transform: translate(0%, -100%);
+  width: 200px;
+  height: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
+.mpg {
+  font-size: 2rem;
+  color: yellow;
+}
+.show-numbers {
+  font-size: 3rem;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+}
+
+.overlay-container {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+}
+.close-window {
+  text-decoration: none;
+  border: none;
+  background-color: white;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

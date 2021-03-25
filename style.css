@@ -7,6 +7,9 @@ body {
   font-family: "Spartan", sans-serif;
 }
 
+h1 {
+  font-size: 2rem;
+}
 /* LAYOUT */
 .grid-container {
   display: grid;
@@ -22,10 +25,9 @@ body {
   justify-content: center;
   align-content: center;
   background-color: black;
-  font-size: 2rem;
   color: white;
   width: 100%;
-  height: 3rem;
+  height: 4rem;
 }
 
 .grid-yellow {
@@ -69,7 +71,7 @@ body {
   border-radius: 10px;
   min-width: 300px;
 }
-.wpisz,
+.container-mpg,
 .counter {
   z-index: 11;
   display: flex;
@@ -94,34 +96,12 @@ body {
   margin: 10px;
 }
 /* BUTTON */
-.check {
+.check,
+.check2 {
   width: 150px;
   cursor: pointer;
   padding: 10px;
   border-radius: 5px;
-}
-/* OKNO Z WYNIKIEM */
-/* .result-window {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(185, 185, 185);
-  border-radius: 15px;
-  box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.8);
-  z-index: 10;
-  top: 0;
-  left: 0;
-  transform: translate(0%, -105%);
-  width: 200px;
-  height: 300px;
-  padding: 10px;
-  text-align: center;
-} */
-
-.mpg {
-  font-size: 2rem;
-  color: yellow;
-}
-.show-numbers {
-  font-size: 3rem;
 }
 
 .overlay {
@@ -139,6 +119,9 @@ body {
   text-align: center;
   z-index: 2;
 }
+.overlay-container p {
+  margin: 10px;
+}
 .close-window,
 .close-window2 {
   text-decoration: none;
@@ -148,7 +131,57 @@ body {
   cursor: pointer;
 }
 
+/* TIME */
+.counter-time {
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  grid-area: counter;
+  justify-self: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-width: 300px;
+}
+.container-time {
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+}
+.overlay-container-time {
+  text-align: center;
+  z-index: 2;
+}
+
+.container-time p {
+  padding-top: 10px;
+}
+
+.overlay-container-time p {
+  margin: 10px;
+}
+.worked-total,
+.worked-break,
+.mpg {
+  font-size: 1rem;
+  color: rgb(255, 0, 179);
+}
+.show-total,
+.show-break,
+.show-numbers {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.start,
+.finish {
+  width: 200px;
+  font-size: 2rem;
+  border: solid 1px rgb(97, 97, 97);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.57);
+}
 .hidden {
   display: none;
 }
-/* TIME */

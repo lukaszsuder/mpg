@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="grid-container">
-      <div class="grid-black">Simple MPG</div>
+      <div class="grid-black"><h1>Simple MPG</h1></div>
       <div class="grid-yellow"></div>
       <section class="welcome-page">
         <div class="first-choice" id="choice-mpg">MPG</div>
@@ -18,7 +18,7 @@
 
       <section class="counter hidden">
         <button class="close-window">&times;</button>
-        <div class="wpisz">
+        <div class="container-mpg">
           <input type="number" class="milage" />
           <span class="radio-buttons">
             <input
@@ -46,6 +46,25 @@
         <div class="overlay-container hidden">
           <p class="mpg">MPG:</p>
           <p class="show-numbers">Error</p>
+        </div>
+      </section>
+
+      <section class="counter-time hidden">
+        <button class="close-window2">&times;</button>
+        <div class="container-time">
+          <p>Start:</p>
+          <input type="number" class="start" />
+          <p>End:</p>
+          <input type="number" class="finish" />
+          <div class="container-check">
+            <button class="check2">Check</button>
+          </div>
+        </div>
+        <div class="overlay-container-time hidden">
+          <p class="worked-total">Worked Total:</p>
+          <p class="show-total">Error</p>
+          <p class="worked-break">Worked - Break:</p>
+          <p class="show-break">Error</p>
         </div>
       </section>
       <div class="overlay hidden"></div>

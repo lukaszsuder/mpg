@@ -12,30 +12,26 @@
       <div class="grid-black">Simple MPG</div>
       <div class="grid-yellow"></div>
       <section class="counter">
-        <div class="container-milage">
-          <div class="row1"><input type="number" class="milage" /></div>
-          <div class="row2">
-            <input
-              type="radio"
-              id="kilometers"
-              name="distance"
-              value="k"
-              checked
-            />
-            <label for="kilometers">Kilometers</label>
-            <input type="radio" id="miles" name="distance" value="m" />
-            <label for="miles">Miles</label>
-          </div>
-        </div>
-        <div class="container-litres">
-          <div class="row1"><input type="number" class="fuel" /></div>
-          <div class="row2">
-            <input type="radio" id="litres" name="fuel" value="l" checked />
-            <label for="litres">Litres</label>
-            <input type="radio" id="galons" name="fuel" value="g" />
-            <label for="galons">Galons</label>
-          </div>
-        </div>
+        <input type="number" class="milage" />
+        <span class="radio-buttons">
+          <input
+            type="radio"
+            id="kilometers"
+            name="distance"
+            value="k"
+            checked
+          />
+          <label for="kilometers">Kilometers</label>
+          <input type="radio" id="miles" name="distance" value="m" />
+          <label for="miles">Miles</label>
+        </span>
+        <input type="number" class="fuel" />
+        <span class="radio-buttons">
+          <input type="radio" id="litres" name="fuel" value="l" checked />
+          <label for="litres">Litres</label>
+          <input type="radio" id="galons" name="fuel" value="g" />
+          <label for="galons">Galons</label>
+        </span>
         <div class="container-check">
           <button class="check">Check</button>
         </div>

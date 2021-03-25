@@ -11,40 +11,46 @@
     <div class="grid-container">
       <div class="grid-black">Simple MPG</div>
       <div class="grid-yellow"></div>
-      <section class="counter">
-        <input type="number" class="milage" />
-        <span class="radio-buttons">
-          <input
-            type="radio"
-            id="kilometers"
-            name="distance"
-            value="k"
-            checked
-          />
-          <label for="kilometers">Kilometers</label>
-          <input type="radio" id="miles" name="distance" value="m" />
-          <label for="miles">Miles</label>
-        </span>
-        <input type="number" class="fuel" />
-        <span class="radio-buttons">
-          <input type="radio" id="litres" name="fuel" value="l" checked />
-          <label for="litres">Litres</label>
-          <input type="radio" id="galons" name="fuel" value="g" />
-          <label for="galons">Galons</label>
-        </span>
-        <div class="container-check">
-          <button class="check">Check</button>
+      <section class="welcome-page">
+        <div class="first-choice" id="choice-mpg">MPG</div>
+        <div class="first-choice" id="choice-time">Time</div>
+      </section>
+
+      <section class="counter hidden">
+        <button class="close-window">&times;</button>
+        <div class="wpisz">
+          <input type="number" class="milage" />
+          <span class="radio-buttons">
+            <input
+              type="radio"
+              id="kilometers"
+              name="distance"
+              value="k"
+              checked
+            />
+            <label for="kilometers">Kilometers</label>
+            <input type="radio" id="miles" name="distance" value="m" />
+            <label for="miles">Miles</label>
+          </span>
+          <input type="number" class="fuel" />
+          <span class="radio-buttons">
+            <input type="radio" id="litres" name="fuel" value="l" checked />
+            <label for="litres">Litres</label>
+            <input type="radio" id="galons" name="fuel" value="g" />
+            <label for="galons">Galons</label>
+          </span>
+          <div class="container-check">
+            <button class="check">Check</button>
+          </div>
+        </div>
+        <div class="overlay-container hidden">
+          <p class="mpg">MPG:</p>
+          <p class="show-numbers">Error</p>
         </div>
       </section>
-    </div>
-    <div class="overlay-container">
-      <div class="result-window hidden">
-        <button class="close-window">&times;</button>
-        <p class="mpg">MPG:</p>
-        <p class="show-numbers">Error</p>
-      </div>
       <div class="overlay hidden"></div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

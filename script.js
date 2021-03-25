@@ -3,19 +3,40 @@
 const resultWindow = document.querySelector(".result-window");
 const btnResult = document.querySelector(".check");
 const overlayBlur = document.querySelector(".overlay");
+const overlayContainer = document.querySelector(".overlay-container");
+const wpisz = document.querySelector(".wpisz");
 const btnClose = document.querySelector(".close-window");
+const btnClose2 = document.querySelector(".close-window2");
 const radioKilo = document.querySelectorAll("input[name=distance]");
 const radioFuel = document.querySelectorAll("input[name=fuel]");
+const choiceMpg = document.querySelector("#choice-mpg");
+const choiceTime = document.querySelector("#choice-time");
+const counterWindow = document.querySelector(".counter");
+
+// First Choice
+// Open MPG  Window
+const mpgWindow = function () {
+  counterWindow.classList.remove("hidden");
+  overlayBlur.classList.remove("hidden");
+};
+choiceMpg.addEventListener("click", mpgWindow);
+
+// Open Time Window
+const timeWindow = function () {
+  overlayBlur.classList.remove("hidden");
+};
+choiceTime.addEventListener("click", timeWindow);
 
 //MPG Function
-const obliczMpg = function (x, y) {
+function obliczMpg(x, y) {
   return x / y;
-};
+}
 
 // Result Window
 const showMpg = function () {
-  resultWindow.classList.remove("hidden");
-  overlayBlur.classList.remove("hidden");
+  // resultWindow.classList.remove("hidden");
+  wpisz.classList.add("hidden");
+  overlayContainer.classList.remove("hidden");
 
   // DISTANCE. Take data
   let selectedValueDistance;
@@ -28,13 +49,10 @@ const showMpg = function () {
 
   // Check Value in Distance
   let multiplierDist;
-  if (selectedValueDistance === "k") {
-    multiplierDist = 0.62137;
-    console.log(`Multiplier Dis: ${multiplierDist}`);
-  } else if (selectedValueDistance === "m") {
-    multiplierDist = 1;
-    console.log(`Multiplier Dis: ${multiplierDist}`);
-  }
+  selectedValueDistance === "k"
+    ? (multiplierDist = 0.62137)
+    : (multiplierDist = 1);
+
   let miles = Number(document.querySelector(".milage").value) * multiplierDist;
 
   // FUEL. Take data
@@ -47,14 +65,10 @@ const showMpg = function () {
   }
   // Check Value in FUEL
   let multiplierFuel;
-  if (selectedValueFuel === "l") {
-    multiplierFuel = 0.219969;
-    console.log(`Multiplier Fuel: ${multiplierFuel}`);
-  } else if (selectedValueFuel === "g") {
-    multiplierFuel = 1;
-    console.log(`Multiplier Fuel: ${multiplierFuel}`);
-  }
-  console.log(`Miles: ${miles}`);
+  selectedValueFuel === "l"
+    ? (multiplierFuel = 0.219969)
+    : (multiplierFuel = 1);
+
   let litres = Number(document.querySelector(".fuel").value) * multiplierFuel;
   // Get Decimal Numbers
   let obliczMpgResult = obliczMpg(miles, litres);
@@ -63,11 +77,23 @@ const showMpg = function () {
   document.querySelector(".show-numbers").textContent = decimalNumber;
 };
 
-// Funkcja zamykająca wynik
+// Closing Window MPG
 const closeMpg = function () {
-  resultWindow.classList.add("hidden");
+  //resultWindow.classList.add("hidden");
+  overlayContainer.classList.add("hidden");
   overlayBlur.classList.add("hidden");
+  counterWindow.classList.add("hidden");
+  wpisz.classList.remove("hidden");
 };
-
+const closeMpg2 = function () {
+  //resultWindow.classList.add("hidden");
+  overlayContainer.classList.add("hidden");
+  overlayBlur.classList.add("hidden");
+  counterWindow.classList.add("hidden");
+};
 btnClose.addEventListener("click", closeMpg);
 btnResult.addEventListener("click", showMpg);
+
+// END MPG
+
+// START TIME

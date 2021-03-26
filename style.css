@@ -73,7 +73,8 @@ h1 {
   border: 1px solid black;
   border-radius: 10px;
   min-width: 300px;
-  transform: translate(0%, -10%);
+  min-height: 335px;
+  transform: translate(0%, -25%);
 }
 .container-mpg,
 .counter,
@@ -128,7 +129,7 @@ h1 {
   text-align: center;
   z-index: 2;
 }
-.overlay-container p {
+.overlay-container p .overlay-container-time p {
   margin: 10px;
 }
 .close-window,
@@ -147,9 +148,6 @@ h1 {
   padding-top: 10px;
 }
 
-.overlay-container-time p {
-  margin: 10px;
-}
 .worked-total,
 .worked-break,
 .mpg {

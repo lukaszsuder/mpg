@@ -5,31 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Modal Project</title>
+    <title>Simple MPG</title>
   </head>
   <body>
-    <button class="show-modal">Show modal 1</button>
-    <button class="show-modal">Show modal 2</button>
-    <button class="show-modal">Show modal 3</button>
+    <div class="grid-container">
+      <div class="grid-black"><h1>Simple MPG</h1></div>
+      <div class="grid-yellow"></div>
+      <section class="welcome-page">
+        <div class="first-choice" id="choice-mpg">MPG</div>
+        <div class="first-choice" id="choice-time">Time</div>
+      </section>
 
-    <div class="modal hidden">
-      <button class="close-modal">&times;</button>
-      <h1>I'm a modal window</h1>
+      <section class="counter hidden">
+        <button class="close-window">&times;</button>
+        <div class="container-mpg">
+          <input type="number" class="milage" />
+          <span class="radio-buttons">
+            <input
+              type="radio"
+              id="kilometers"
+              name="distance"
+              value="k"
+              checked
+            />
+            <label for="kilometers">Kilometers</label>
+            <input type="radio" id="miles" name="distance" value="m" />
+            <label for="miles">Miles</label>
+          </span>
+          <input type="number" class="fuel" />
+          <span class="radio-buttons">
+            <input type="radio" id="litres" name="fuel" value="l" checked />
+            <label for="litres">Litres</label>
+            <input type="radio" id="galons" name="fuel" value="g" />
+            <label for="galons">Galons</label>
+          </span>
+          <div class="container-check">
+            <button class="check">Check</button>
+          </div>
+        </div>
+        <div class="overlay-container hidden">
+          <p class="mpg">MPG:</p>
+          <p class="show-numbers">Error</p>
+        </div>
+      </section>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        magna augue, eleifend pharetra consequat scelerisque, aliquet sit amet
-        ante. Nunc elementum pulvinar quam eget tempor. Duis eget diam gravida,
-        sagittis est tempus, pretium nisl. Mauris risus metus, vulputate vitae
-        porttitor ut, mollis faucibus massa. Donec diam risus, interdum id dolor
-        sit amet, imperdiet aliquet risus. Nunc lacinia tellus mi, sit amet
-        sollicitudin erat viverra vel. Maecenas eleifend faucibus tortor.
-        Quisque bibendum feugiat turpis ac vulputate. Morbi luctus leo et purus
-        consectetur interdum. Aenean gravida dignissim dapibus.
-      </p>
+      <section class="counter-time hidden">
+        <button class="close-window2">&times;</button>
+        <div class="container-time">
+          <p>Start:</p>
+          <input type="number" class="start" />
+          <p>End:</p>
+          <input type="number" class="finish" />
+          <div class="container-check">
+            <button class="check2">Check</button>
+          </div>
+        </div>
+        <div class="overlay-container-time hidden">
+          <p class="worked-total">Worked Total:</p>
+          <p class="show-total">Error</p>
+          <p class="worked-break">Worked - Break:</p>
+          <p class="show-break">Error</p>
+        </div>
+      </section>
+      <div class="overlay hidden"></div>
     </div>
 
-    <div class="overlay hidden"></div>
     <script src="script.js"></script>
   </body>
 </html>

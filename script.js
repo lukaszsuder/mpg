@@ -75,7 +75,7 @@ const showMpg = function () {
   let litres = Number(document.querySelector(".fuel").value) * multiplierFuel;
   // Get Decimal Numbers
   let obliczMpgResult = obliczMpg(miles, litres);
-  let decimalNumber = Math.round((obliczMpgResult * 100) / 100).toFixed(2);
+  let decimalNumber = ((obliczMpgResult * 100) / 100).toFixed(2);
 
   document.querySelector(".show-numbers").textContent = decimalNumber;
 };
